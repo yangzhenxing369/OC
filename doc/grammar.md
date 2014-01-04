@@ -193,7 +193,7 @@ int main( int argc, const char * argv[] ) {
             /******************/
             
             char c = 'a';
-            char d = ’b';
+            char d = 'b';
         
             a = a - 32;
             b = b - 32;
