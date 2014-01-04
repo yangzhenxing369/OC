@@ -11,6 +11,7 @@
 
 #### 一个示例
 * 类接口
+
 ``` objective-c
 #import <Foundation/Foundation.h>
 
@@ -39,6 +40,7 @@
 ```
 
 * 类实现
+
 ``` objective-c
 @implementation Member
 -(NString*) name {
@@ -105,7 +107,7 @@ int main (int argc, const char* argv[]){
 * 输入输出
     使用NSLog输出
     使用scanf输入
-    
+
 ``` objective-c
 #import <Foundation/Foundation.h>
 int main( int argc, const char * argv[] ) {
