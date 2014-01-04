@@ -11,7 +11,7 @@
 
 #### 一个示例
 * 类接口
-```objective-c
+``` objective-c
 #import <Foundation/Foundation.h>
 
 //注意继承机制
@@ -39,7 +39,7 @@
 ```
 
 * 类实现
-```objective-c
+``` objective-c
 @implementation Member
 -(NString*) name {
     return name；
@@ -69,7 +69,7 @@
 * 应用程序
 main方法是整个应用程序的入口，首先被调用。
 
-```objective-c
+``` objective-c
 int main (int argc, const char* argv[]){
     //设置自动释放池
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
@@ -106,7 +106,7 @@ int main (int argc, const char* argv[]){
     使用NSLog输出
     使用scanf输入
     
-```objective-c
+``` objective-c
 #import <Foundation/Foundation.h>
 int main( int argc, const char * argv[] ) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -135,6 +135,9 @@ int main( int argc, const char * argv[] ) {
 #### 基本数据类型
 
 1. 整型
+    * 短整型
+    * 整型
+    * 长整形
 
 2. 实型
 
