@@ -137,17 +137,96 @@ int main( int argc, const char * argv[] ) {
 #### 基本数据类型
 
 1. 整型
-    * 短整型
-    * 整型
-    * 长整形
+    * 短整型 short int / short (2B)
+    * 整型 int(4B)
+    * 长整形 long int / long (4B)
+    * 无符号型 unsigned
+        * unsigned short 
+        * unsigned int / unsigned
+        * unsigned long 
+    * 实例
+    ` int x,y;`
+    ` NSLog => %i `
+    
 
 2. 实型
 
+    ######常量
++ 浮点数，两种形式：小数形式和指数形式
++ 小数=> `3.14 , NSLog=> %f`
++ 指数=> `2.1E2=2.1*100 NSLog=> %e`
+        `NSLog=> %g` => 最短的方式表示一个浮点数
+        
+    ######变量
++ 单精度 float 4B 
++ 双精度 double 8B
++ 长双精度 long double 16B
+
+
 3. 字符型
+    ######常量
+    * 单引号 括起来 一个字符 `'c'`
+    * 不能用双引号
+    * 任一字符都可用转义字符来表示，如`\101=A`,`\102=B`
+    
+    ######变量
+    * 字符变量 => 用来存储字符常量，即单个字符
+    * char ` char a = 'A' ` `NSLog => %c`
+    * 可以把字符型当做整型，反之不能；字符型只有8个位
+
+    ###### 一个例子
+    ``` objective-c
+    import <Foundation/Foundation.h>
+    int main( int argc, const char * argv[]){
+        @autoreleasepool {
+            char a = 120;
+            char b = 121;
+            
+            NSLog(@"%c,%c",a,b);
+            NSLog(@"%i,%i",a,b);
+            
+            /******************/
+            /* 
+                x,y
+               120,121
+            */
+            /******************/
+            
+            char c = 'a';
+            char d = ’b';
+        
+            a = a - 32;
+            b = b - 32;
+            
+            NSLog(@"%c,%c", c,d);
+            NSLog(@"%i,%i", c,d);
+            
+            /******************/
+            /*
+                A,B
+                65,66
+            */
+            /******************/
+        }
+    }
+    ```
+
 
 4. 字符串
 
+    * 由`@`和一对双引号括起来的字符序列组成
+    * 例子：`@CHINA`, `@program`
+    * OC中的字符串，不能作为字符的数组被实现
+    * 字符串的类型为NSString，它不是一个简单数据类型，而是一个对象类型
+
 5. id类型
+
+    * 一个特殊的类型，类似Java的Object类型，可被转换为任何类型
+    * id类型的变量可以存放任何数据类型的对象
+    * 一个使用示例
+    ``` objective-c
+    
+    ```
 
 6. 类型转换
 
