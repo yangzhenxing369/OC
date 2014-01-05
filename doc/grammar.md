@@ -217,18 +217,20 @@ int main( int argc, const char * argv[] ) {
     * OC中的字符串，不能作为字符的数组被实现
     * 字符串的类型为NSString，它不是一个简单数据类型，而是一个**对象类型**
 
-5. id类型
+5.id类型
 
     * 一个特殊的类型，类似Java的Object类型，可被转换为任何类型
     * id类型的变量可以存放任何数据类型的对象
     * 一个使用示例
+    
     ``` objective-c
         id anObject;
         - (id) newObject: (int) type;
     
     ```
+    
     * id的实质
-    在 objc.h 文件中定义
+        在 objc.h 文件中定义
     
     ``` objective-c
     typedef struct objc_class *Class;
