@@ -216,9 +216,8 @@ int main( int argc, const char * argv[] ) {
     * 例子：`@CHINA`, `@program`
     * OC中的字符串，不能作为字符的数组被实现
     * 字符串的类型为NSString，不是一个简单数据类型而是一个对象类型。
-
-5. id类型
-
+    
+4. 字符串 
     * 一个特殊的类型，类似Java的Object类型，可被转换为任何类型
     * id类型的变量可以存放任何数据类型的对象
     * 一个使用示例
