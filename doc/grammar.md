@@ -308,28 +308,6 @@ int main( int argc, const char * argv[] ) {
     }
     ```
     
-5. 字符串
-
-    * 由`@`和一对双引号括起来的字符序列组成。
-    * 例子：`@CHINA`, `@program`。
-    * OC中的字符串，不能作为字符的数组被实现。
-    * 字符串的类型为NSString，不是一个简单数据类型而是一个对象类型。
-    
-    
-6. 类型转换
-
-
-7. 枚举类型
-
-    * 一个变量只有几个固定值时
-    * 定义 `enum sex {male, female}`;
-    * 使用 `enum sex student, teacher;`
-    * 复制 `student = male;`
-
-8. typedef
-
-    * 为 **数据类型** 指派另一个名字
-
 #### 其他数据类型
 
 ##### BOOL
