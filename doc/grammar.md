@@ -300,6 +300,7 @@ int main( int argc, const char * argv[] ) {
     ```
     
     测试文件
+    
     ``` objective-c
     #import <Foundation/Foundation.h>
     #import "Student.h"
@@ -318,12 +319,14 @@ int main( int argc, const char * argv[] ) {
 
 
 7. 枚举类型
+
     * 一个变量只有几个固定值时
     * 定义 `enum sex {male, female}`;
     * 使用 `enum sex student, teacher;`
     * 复制 `student = male;`
 
 8. typedef
+
     * 为 **数据类型** 指派另一个名字
 
 #### 其他数据类型
