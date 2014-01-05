@@ -136,30 +136,7 @@ int main( int argc, const char * argv[] ) {
 
 #### 基本数据类型
 
-5. 字符串
-
-    * 由`@`和一对双引号括起来的字符序列组成。
-    * 例子：`@CHINA`, `@program`。
-    * OC中的字符串，不能作为字符的数组被实现。
-    * 字符串的类型为NSString，不是一个简单数据类型而是一个对象类型。
-    
-    
-6. 类型转换
-
-
-7. 枚举类型
-
-    * 一个变量只有几个固定值时
-    * 定义 `enum sex {male, female}`;
-    * 使用 `enum sex student, teacher;`
-    * 复制 `student = male;`
-
-8. typedef
-
-    * 为 **数据类型** 指派另一个名字
-
-
-1. 整型
++ 整型
     * 短整型 short int / short (2B)
     * 整型 int(4B)
     * 长整形 long int / long (4B)
@@ -172,7 +149,7 @@ int main( int argc, const char * argv[] ) {
     ` NSLog => %i `
     
 
-2. 实型
++ 实型
     ######常量
     + 浮点数，两种形式：小数形式和指数形式
     + 小数=> `3.14 , NSLog=> %f`
@@ -184,7 +161,7 @@ int main( int argc, const char * argv[] ) {
     + 双精度 double 8B
     + 长双精度 long double 16B
 
-3. 字符型
++ 字符型
     ######常量
     * 单引号 括起来 一个字符 `'c'`
     * 不能用双引号
@@ -231,9 +208,8 @@ int main( int argc, const char * argv[] ) {
         }
     }
     ```
-
     
-4. id类型 
++ id类型 
 
     * 一个特殊的类型，类似Java的Object类型，可被转换为任何类型
     * id类型的变量可以存放任何数据类型的对象
@@ -330,6 +306,27 @@ int main( int argc, const char * argv[] ) {
         }
     }
     ```
++ 字符串
+
+    * 由`@`和一对双引号括起来的字符序列组成。
+    * 例子：`@CHINA`, `@program`。
+    * OC中的字符串，不能作为字符的数组被实现。
+    * 字符串的类型为NSString，不是一个简单数据类型而是一个对象类型。
+    
+    
++ 类型转换
+
+
++ 枚举类型
+
+    * 一个变量只有几个固定值时
+    * 定义 `enum sex {male, female}`;
+    * 使用 `enum sex student, teacher;`
+    * 复制 `student = male;`
+
++ typedef
+
+    * 为 **数据类型** 指派另一个名字
     
 #### 其他数据类型
 
