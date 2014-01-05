@@ -226,7 +226,6 @@ int main( int argc, const char * argv[] ) {
     ``` objective-c
         id anObject;
         - (id) newObject: (int) type;
-    
     ```
     
     * id的实质
