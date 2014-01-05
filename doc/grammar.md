@@ -150,18 +150,16 @@ int main( int argc, const char * argv[] ) {
     
 
 2. 实型
-
     ######常量
-+ 浮点数，两种形式：小数形式和指数形式
-+ 小数=> `3.14 , NSLog=> %f`
-+ 指数=> `2.1E2=2.1*100 NSLog=> %e`
+    + 浮点数，两种形式：小数形式和指数形式
+    + 小数=> `3.14 , NSLog=> %f`
+    + 指数=> `2.1E2=2.1*100 NSLog=> %e`
         `NSLog=> %g` => 最短的方式表示一个浮点数
         
     ######变量
-+ 单精度 float 4B 
-+ 双精度 double 8B
-+ 长双精度 long double 16B
-
+    + 单精度 float 4B 
+    + 双精度 double 8B
+    + 长双精度 long double 16B
 
 3. 字符型
     ######常量
@@ -231,6 +229,7 @@ int main( int argc, const char * argv[] ) {
     ```
     * id的实质
     在 objc.h 文件中定义
+    
     ``` objective-c
     typedef struct objc_class *Class;
     typedef struct objc_object{
@@ -238,6 +237,7 @@ int main( int argc, const char * argv[] ) {
     } *id;
     ```
     在NSObject.h中，NSObject类的定义
+    
     ``` objective-c
     @interface NSObject <NSObject>{
         Class isa;
@@ -253,7 +253,6 @@ int main( int argc, const char * argv[] ) {
     //很多其他方法，这里省了。。
     
     @end
-    
     ```
     
     * id是一个指向**struct objc_object** 的一个指针。即id是一个指向任何一个继承了Object/NSObject类的对象。
@@ -262,6 +261,8 @@ int main( int argc, const char * argv[] ) {
     * id是一个指针，不需要星号 `id foo = nil `
     * id类型是OC默认的数据类型（C语言默认的数据类型是int)
     * 关键字**nil** 被定义为空对象，也是值为0的**对象**
+    
+    
 6. 类型转换
 
 7. 枚举类型
