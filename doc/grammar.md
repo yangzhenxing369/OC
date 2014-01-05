@@ -347,8 +347,45 @@ int main( int argc, const char * argv[] ) {
 #### 条件语句
 
 #### 循环语句
+##### while语句
+    先判断，后执行
+``` 
+    while(表达式)
+        语句
+```
+
+```
+    int count = 1;
+    while (count <= 4){
+        NSLog(@"%i", count);
+        ++count;
+    }
+```
+
+##### do-while语句
+    先执行，后判断
+```
+    do 
+        语句
+    while(表达式)
+```
+##### for语句
+```
+    for(循环变量 赋初值; 循环条件; 循环变量增量)
+        语句;
+```
+
+```
+    for(i=1 ; i <= 100; i++)
+        sum = sum + 1;
+```
 
 #### 跳转语句
+* `break;` => 用在switch语句中 以跳出switch执行该结构以后之后；用在循环语句中，跳转循环；
+
+* `continue;` => 只跳出本次循环。
+
+* `return;` 
 
 ***
 
