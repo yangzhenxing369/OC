@@ -262,6 +262,56 @@ int main( int argc, const char * argv[] ) {
     * id类型是OC默认的数据类型（C语言默认的数据类型是int)
     * 关键字**nil** 被定义为空对象，也是值为0的**对象**
     
+Student.h    
+``` objective-c
+
+    #import <Foundation/Foundation.h>
+    @interface Student : NSObject {
+        int sid;
+        NSString *name;
+    }
+    
+    
+    @property int sid;
+    @property (nonatomic,retain) NSString *name;
+    
+    - (void) print;
+    - (void) setSid: (int)sid andName: (NSString*) name;
+    
+    @end
+```
+Student.m
+``` objective-c
+#import "Student.h"
+
+@implementation Student
+@synthesize sid, name;
+
+-(void) print{
+    NSLog(@"我的学号：%i, 我的名字是：%@", sid, name);
+}
+
+-(void) setSid:(int) sid1 andName: (String*) name1 {
+    self.sid = sid1;
+    self.name = name;
+}
+```
+
+测试文件
+``` objective-c
+#import <Foundation/Foundation.h>
+#import "Student.h"
+
+int main(int argc, const char* argv[]){
+    @autoreleasepool{
+        id data;
+        Student* stu = [[Student alloc] init];
+        data = stu;
+        [data print];
+    }
+}
+
+```
     
 6. 类型转换
 
