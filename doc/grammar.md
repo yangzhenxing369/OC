@@ -1,6 +1,7 @@
 ## Objective-C学习之旅
 
 ***
+***
 
 ### Objective-C程序结构
 
@@ -130,6 +131,7 @@ int main( int argc, const char * argv[] ) {
     2. @开头 => 指令符
     @“char" => 字符串常量
     
+***
 ***
 
 ### 数据类型
@@ -327,6 +329,8 @@ int main( int argc, const char * argv[] ) {
 + typedef
 
     * 为 **数据类型** 指派另一个名字
+
+***
     
 #### 其他数据类型
 
@@ -338,9 +342,12 @@ int main( int argc, const char * argv[] ) {
 
 ##### nil & Nil
 
+***
+
 #### 运算符和表达式
 
 
+***
 ***
 
 ### 循环语句
@@ -381,6 +388,8 @@ int main( int argc, const char * argv[] ) {
         sum = sum + 1;
 ```
 
+***
+
 #### 跳转语句
 * `break;` => 用在switch语句中 以跳出switch执行该结构以后之后；用在循环语句中，跳转循环；
 
@@ -389,10 +398,12 @@ int main( int argc, const char * argv[] ) {
 * `return;` 
 
 ***
+***
 
 ### 一些其他语法
 
 *** 
+***
 
 ### 类
 
