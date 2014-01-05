@@ -217,7 +217,7 @@ int main( int argc, const char * argv[] ) {
     * 由`@`和一对双引号括起来的字符序列组成
     * 例子：`@CHINA`, `@program`
     * OC中的字符串，不能作为字符的数组被实现
-    * 字符串的类型为NSString，它不是一个简单数据类型，而是一个对象类型
+    * 字符串的类型为NSString，它不是一个简单数据类型，而是一个 _对象类型_
 
 5. id类型
 
@@ -225,9 +225,43 @@ int main( int argc, const char * argv[] ) {
     * id类型的变量可以存放任何数据类型的对象
     * 一个使用示例
     ``` objective-c
+        id anObject;
+        - (id) newObject: (int) type;
     
     ```
-
+    * id的实质
+    在 objc.h 文件中定义
+    ``` objective-c
+    typedef struct objc_class *Class;
+    typedef struct objc_object{
+        Class isa;
+    } *id;
+    ```
+    在NSObject.h中，NSObject类的定义
+    ``` objective-c
+    @interface NSObject <NSObject>{
+        Class isa;
+    }
+    + (void) load;
+    + (void) initialize;
+    - (void) int;
+    
+    + (void) new;
+    + (id)allc;
+    - (void)dealloc;
+    
+    //很多其他方法，这里省了。。
+    
+    @end
+    
+    ```
+    
+    * id是一个指向**struct objc_object** 的一个指针。即id是一个指向任何一个继承了Object/NSObject类的对象。
+    * id和NSObject* 都是**指针**，都含有Class isa，但NSObject同时包含一些其他的方法，并需要实现**NSObject协议**。
+    * NSObject* 可以由id来表示，但id不能用NSObject*来表示。
+    * id是一个指针，不需要星号 `id foo = nil `
+    * id类型是OC默认的数据类型（C语言默认的数据类型是int)
+    * 关键字**nil** 被定义为空对象，也是值为0的**对象**
 6. 类型转换
 
 7. 枚举类型
