@@ -217,7 +217,7 @@ int main( int argc, const char * argv[] ) {
     * OC中的字符串，不能作为字符的数组被实现
     * 字符串的类型为NSString，它不是一个简单数据类型，而是一个**对象类型**
 
-5.id类型
+5. id类型
 
     * 一个特殊的类型，类似Java的Object类型，可被转换为任何类型
     * id类型的变量可以存放任何数据类型的对象
@@ -273,7 +273,6 @@ int main( int argc, const char * argv[] ) {
         NSString *name;
     }
     
-    
     @property int sid;
     @property (nonatomic,retain) NSString *name;
     
@@ -282,7 +281,9 @@ int main( int argc, const char * argv[] ) {
     
     @end
     ```
+    
     Student.m
+    
     ``` objective-c
     #import "Student.h"
     
@@ -312,7 +313,6 @@ int main( int argc, const char * argv[] ) {
             [data print];
         }
     }
-    
     ```
     
 6. 类型转换
@@ -329,27 +329,113 @@ int main( int argc, const char * argv[] ) {
 
 #### 其他数据类型
 
+##### BOOL
+
+##### SEL
+
+##### Class
+
+##### nil & Nil
+
 #### 运算符和表达式
 
 
-
+***
 
 ### 循环语句
 
-if
-switch
+#### 条件语句
 
-三目
+#### 循环语句
 
-布尔
+#### 跳转语句
 
-循环
-
-跳转
-
-
+***
 
 ### 一些其他语法
 
+*** 
+
 ### 类
+
+#### 协议--protocol
+* 用来实现 **多继承** 功能，多个类共享方法
+* 遵守协议，该类就必须实现所有方法
+* 定义
+
+    ``` objective-c
+    @protocol NSCopying
+    -(id) copyWithZone:(NSZone* ) zone;
+    @end
+    ```
+* 使用
+
+    ``` objective-c
+    @interface Test: NSObject <NSCopying, NSCoding>
+    //类Test 继承NSObject，遵守NSCopying协议
+    @end
+    ```
+* 检查一个对象是否遵守特定协议
+
+    ``` objective-c
+    if( [someObject conformsToProtocol:@protocol (Fly)] == YES) {
+        // 一些操作
+    }
+    ```
+
+* `id <Fly> someObject` => 这个对象是遵守Fly协议的对象
+
+* 拓展现有协议（协议实现协议）=> `@protocal Fly1 <Fly>`
+
+##### 一个示例
+
+*  定义协议
+    
+    ``` objective-c
+    @protocol Fly
+    - (void) go;
+    - (void) stop;
+    
+    //遵守协议的类，可以不必实现
+    @optional
+    - (void) sleep;
+    
+    @end
+    ```
+
+* 定义一个类，遵守Fly协议
+
+    ``` objective-c
+    #import <Foundation/Foundation.h>
+    #import "Fly.h"
+    
+    @interface FlyTest : NSObject<Fly>{
+    }
+    
+    @end
+    ```
+* 实现类
+
+    ``` objective-c
+    # import "FlyTest.h"
+    @implementation FlyTest
+    - (void) go{
+        NSLog(@"go");
+    }
+    
+    - (void) stop{
+        NSLog(@"stop");
+    }
+    @end
+    ```
+
+***
+
+####
+
+
+
+
+
+
 
