@@ -1,26 +1,35 @@
-## This is china
+## ios7 case study weather app
 
+### 准备
+ * 使用xcode创建一个空的project（Applicaton\Empty Application)
+ * 命名为 "SimpleWeather"
+ * close xcode
+ * 使用到的工具
+    * cocoapads => 类似java中的maven
+    * mantle => 
+    * LBBlurredImage => 使图片模糊化
+    * TSMessages => 第三方alert效果库
+    * ReactiveCocoa => functional programming
+ 
+### 配置cocoapads
+* terminal => `sudo gem install cocoapads`
+> 如果找不到cocoapads，使用`sudo gem source -a http://rubygems.org/` & `sudo gem source -a https://rubygems.org/`
+或者到该网站，找cocoapads并下载，在对应的目录下使用`sudo gem install xxxx.gem`.
+*  `which pod`  & Podfiles 为其配置文件
+*  `cd project_directory`, & `pico` => 启动 Pico editor
+*   写入以下内容
+> platform :ios,'7.0'
+> pod 'Mantle'
+> pod 'LBBlurredImage'
+> pod 'TSMessages'
+> pod 'ReactiveCocoa'
 
-### shandong
+    保存并命名Podfile，退出
 
-### shanghai 
+* `pod install`
+* 打开项目目录，打开.xcworkspace 文件
 
-### jiangsu 
-
-
-[TOC]
-
-
-
-
-
-
-
-
-
-
-
-
+### 定义 View Controller
 
 
 
